@@ -1,0 +1,170 @@
+/* ==== Global ==== */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  transition: 0.3s;
+}
+
+/* Top Bar */
+.topbar {
+  background: rgba(7, 34, 47, 0.93);
+  color: #fff;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.menu-btn {
+  font-size: 22px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  left: -240px;
+  width: 230px;
+  height: 100%;
+  background: rgba(7, 34, 47, 0.93);
+  backdrop-filter: blur(12px);
+  padding-top: 20px;
+  transition: 0.4s;
+  overflow-y: auto;
+  box-shadow: 4px 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+/* Profile Box */
+.profile-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.profile-pic {
+  position: relative;
+  width: 110px;
+  height: 110px;
+  margin-bottom: 10px;
+}
+
+.profile-pic img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #fff;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+  transition: transform 0.3s;
+}
+
+.profile-pic img:hover {
+  transform: scale(1.05);
+}
+
+.edit-icon {
+  position: absolute;
+  top: 90px;
+  right: 5px;
+  background: #6200ea;
+  color: white;
+  font-size: 14px;
+  padding: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+  transition: 0.3s;
+}
+
+.edit-icon:hover {
+  background: #fff;
+  color: #6200ea;
+}
+
+/* Edit Menu */
+.edit-menu {
+  position: absolute;
+  top: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(50, 50, 70, 0.9);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  padding: 10px;
+  display: none;
+  flex-direction: column;
+  gap: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.edit-menu label,
+.edit-menu button {
+  color: white;
+  background: #333;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.edit-menu label:hover,
+.edit-menu button:hover {
+  background: #6200ea;
+}
+
+.profile-info strong {
+  font-size: 14px;
+  word-break: break-word;
+}
+
+/* Sidebar Menu */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 15px 20px;
+  color: white;
+  cursor: pointer;
+}
+
+.sidebar ul li:hover {
+  background: rgba(98, 0, 234, 0.3);
+}
+
+/* Content */
+.content {
+  margin-left: 0;
+  transition: 0.4s;
+  padding: 20px;
+}
+
+.content.shift {
+  margin-left: 230px;
+}
+
+/* Dark Mode */
+body.dark {
+  background: #121212;
+  color: #f1f1f1;
+}
+
+body.dark .topbar {
+  background: #333;
+}
+
+body.dark .sidebar {
+  background: rgba(20, 20, 20, 0.8);
+}

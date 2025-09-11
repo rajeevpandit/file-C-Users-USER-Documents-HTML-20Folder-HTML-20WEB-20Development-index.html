@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Login & Signup</title>
+    <style>
+      body {
+        font-family: Arial;
+        background: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .box {
+        background: #fff;
+        padding: 25px;
+        border-radius: 10px;
+        width: 320px;
+        text-align: center;
+      }
+
+      input {
+        width: 100%;
+        padding: 10px;
+        margin: 8px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      .btns {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+      }
+
+      button {
+        flex: 1;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        color: #fff;
+      }
+
+      button.signup {
+        background: #28a745;
+      }
+
+      button.login {
+        background: #007bff;
+      }
+
+      .loader {
+        display: none;
+        border: 6px solid #f3f3f3;
+        border-top: 6px solid rgb(0, 132, 255);
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        margin: 15px auto;
+        animation: spin 1s linear infinite;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      .msg {
+        margin-top: 8px;
+        color: red;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+
+<body>
+  <div class="box">
+    <h2>Login & Sign Up</h2>
+    <form id="mainForm" onsubmit="return false;">
+      <input type="email" id="email" placeholder="Enter Email" required>
+      <input type="password" id="password" placeholder="6-digit Password" maxlength="6" required>
+      <div class="btns">
+        <button class="signup" type="button" id="signupBtn">Sign Up</button>
+        <button class="login" type="button" id="loginBtn">Login</button>
+      </div>
+      <div class="loader" id="loader"></div>
+      <div class="msg" id="msg"></div>
+    </form>
+  </div>
+
+  <!-- External JS -->
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome Page</title>
+  <link rel="stylesheet" href="welcome.css">
+</head>
+<body>
+  <!-- Top Bar -->
+  <div class="topbar">
+    <span class="menu-btn">&#9776;</span>
+    <h2>Welcome Page</h2>
+  </div>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="profile-box">
+      <div class="profile-pic">
+        <img src="default.png" id="userPhoto">
+        <span class="edit-icon" id="editIcon">✎</span>
+        <div class="edit-menu" id="editMenu">
+          <label for="uploadPhoto">📤 Upload/Change Photo</label>
+          <input type="file" id="uploadPhoto" accept="image/*" hidden>
+          <button id="removePhoto">❌ Remove Photo</button>
+        </div>
+      </div>
+      <div class="profile-info">
+        <strong id="userEmail">user@example.com</strong>
+      </div>
+    </div>
+
+    <ul>
+      <li>🏠 Home</li>
+      <li>👤 Profile</li>
+      <li>⚙ Settings</li>
+      <li id="darkToggle">🌙 Dark Mode</li>
+      <li>🚪 Logout</li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <div class="content">
+    <h1>Hello 👋</h1>
+    <p>Welcome! This page has a smooth sidebar with animation and profile editing.</p>
+  </div>
+
+  <script src="welcome.js"></script>
+</body>
+</html>
